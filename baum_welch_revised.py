@@ -4,7 +4,7 @@ from numpy import ndarray
 index = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
 # end_state = {0: 'A', 1: 'C', 2: 'G', 3: 'T'}
 
-trans = np.array([[0.9, 0.1], [0.1, 0.9]])
+tp = np.array([[0.9, 0.1], [0.1, 0.9]])
 emis = np.array([[0.2, 0.3, 0.3, 0.2], [0.25, 0.25, 0.25, 0.25]])
 
 init = np.array([0.5, 0.5])
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     np.random.seed(10)
     sequences = ['GGAACCAAGAACGAGGGGCAAGTGGGAGGAGGTGGTCACCTGGAGGGTGTGGACCAGT',
                  'CACTGGTGACTGTGGGCTGCATGGTGAAGGGGGGCAAAGCAGTGACAGCGGGAGTGAG']
-    f, P = forward(sequences[0], trans, emis, init, end)
-    b = backward(sequences[0], trans, emis, init, end)
+    f, P = forward(sequences[0], tp, emis, init, end)
+    b = backward(sequences[0], tp, emis, init, end)
     print(f, P)
     # print(b)
