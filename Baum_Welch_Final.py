@@ -1,6 +1,6 @@
 import numpy as np
 from numpy import ndarray
-
+# Implemented by Noah and Rohan
 index = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
 
 
